@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้าวหมูทอดกระเทียม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="max-w-3xl mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center my-4 text-red-600">เมนู ข้าวหมูทอดกระเทียม</h1>
+        
+        <nav class="bg-white p-4 rounded-lg shadow-md mb-4">
+            <ul class="flex justify-around">
+                <li><a href="#ingredients" class="text-blue-500 hover:underline">ส่วนผสม</a></li>
+                <li><a href="#instructions" class="text-blue-500 hover:underline">วิธีทำ</a></li>
+                <li><a href="#nutrition" class="text-blue-500 hover:underline">ตารางโภชนาการ</a></li>
+                <li><a href="#source" class="text-blue-500 hover:underline">ที่มา</a></li>
+            </ul>
+        </nav>
+
+        <p class="text-lg text-center mb-4">หมูทอดกระเทียม ที่ใช้วิธีหมักให้เข้าเนื้อและนุ่มที่สุด นำมาทอดกับน้ำมันกระเทียม หอมอร่อยสุดๆ</p>
+        
+        <img src="https://chefoldschool.com/wp-content/uploads/2020/08/p86.jpg" 
+             alt="ข้าวหมูทอดกระเทียม" 
+             class="w-full rounded-lg shadow-md mb-4"/>
+
+        <h2 id="ingredients" class="text-2xl font-semibold mt-6 text-green-600">ส่วนผสม</h2>
+        <ul class="list-disc pl-6">
+            <li>เนื้อหมูสันนอก 250 กรัม</li>
+            <li>กระเทียมไทย 1 ถ้วย</li>
+            <li>รากผักชี 7 ราก</li>
+            <li>น้ำมันหอย 1 ช้อนโต๊ะ</li>
+            <li>ซีอิ๊วขาว 2 ช้อนโต๊ะ</li>
+            <li>น้ำตาลทราย 1/2 ช้อนโต๊ะ</li>
+            <li>พริกไทยขาวป่น 1 ช้อนชา</li>
+        </ul>
+
+        <h2 id="instructions" class="text-2xl font-semibold mt-6 text-yellow-600">วิธีทำ</h2>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>หั่นหมูสันนอกเป็นแผ่นบาง ๆ</li>
+            <li>โขลกกระเทียมและรากผักชีให้ละเอียด</li>
+            <li>นำหมูและเครื่องปรุงทั้งหมดมาหมัก</li>
+            <li>แช่ในตู้เย็น 2 ชั่วโมง</li>
+            <li>ทอดกระเทียมเจียว และนำหมูมาทอด</li>
+            <li>เสิร์ฟพร้อมข้าวสวยร้อน ๆ</li>
+        </ol>
+
+        <h2 id="nutrition" class="text-2xl font-semibold mt-6 text-purple-600">ตารางโภชนาการ</h2>
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden mt-4">
+            <thead>
+                <tr class="bg-gray-200 text-gray-700">
+                    <th class="p-2">ข้อมูล</th>
+                    <th class="p-2">ปริมาณ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-t">
+                    <td class="p-2">พลังงาน</td>
+                    <td class="p-2">193 กิโลแคลอรี่</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="p-2">โปรตีน</td>
+                    <td class="p-2">6.1 g</td>
+                </tr>
+                <tr class="border-t">
+                    <td class="p-2">ไขมัน</td>
+                    <td class="p-2">4.9 g</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="source" class="text-2xl font-semibold mt-6 text-blue-600">ที่มา</h2>
+        <p>ข้อมูลจาก: 
+            <a href="https://www.wongnai.com/recipes/ugc/f73dda7be8204a1b83a6635a14624c1b" 
+               class="text-blue-500 hover:underline" target="_blank">Wongnai</a> และ 
+            <a href="https://www.calforlife.com/th/calories/Rice-topped-with-fried-pork-garlic-and-pepper" 
+               class="text-blue-500 hover:underline" target="_blank">Calforlife</a>
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6 text-pink-600">แสดงความคิดเห็น</h2>
+        <form action="/submit-comment" method="post" class="bg-white p-4 rounded-lg shadow-md mt-4">
+            <label for="topic" class="block text-lg font-medium">หัวข้อ:</label>
+            <input type="text" id="topic" name="topic" required 
+                   class="w-full p-2 border border-gray-300 rounded-lg mt-1 mb-4" placeholder="ใส่หัวข้อของคุณที่นี่...">
+            
+            <label for="comment" class="block text-lg font-medium">แสดงความคิดเห็นของคุณ:</label>
+            <textarea id="comment" name="comment" required rows="4" 
+                      class="w-full p-2 border border-gray-300 rounded-lg mt-1 mb-4" 
+                      placeholder="กรุณาใส่ความคิดเห็นของคุณที่นี่..."></textarea>
+            
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">ส่งความคิดเห็น</button>
+            <button type="reset" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg ml-2">ลบความคิดเห็น</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+</head>
+
+<body>
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      .navbar {
+        background-color: lightgreen ;
+        color: black;
+        padding: 10px 20px;
+      }
+      
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        display: flex;
+        align-items: center ;
+        margin-left: 1em;
+      }
+      
+      .logo img {
+        height: 24px;
+        margin-left: 10px;
+      }
+      
+      .menu-toggle {
+        background: none;
+        border: none;
+        color: black;
+        font-size: 24px;
+        cursor: pointer;
+        display:block; 
+      }
+      
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        margin-left: 1em; 
+      }
+      
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .nav-actions img {
+        height: 24px;
+        margin-left: 10px;
+      }
+      
+      .login-button {
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      @media (max-width: 1024px) {
+        .nav-links {
+          display:none; 
+        }
+        .menu-toggle {
+          display: block; 
+        }
+      }
+      
+     
+      @media (max-width: 768px) {
+        .nav-actions {
+          display: none;
+        }
+      }
+      
+    .navba {
+        border: 1px solid black;
+        padding: 10px;
+        display: block;
+        justify-content: center; /* จัด Navbar ให้อยู่กึ่งกลาง */
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: white;
+        overflow: hidden; /* ซ่อนข้อความที่เกิน */
+        white-space: nowrap; /* ป้องกันขึ้นบรรทัดใหม่ */
+        text-overflow: ellipsis; /* ตัดข้อความที่เกิน */
+        max-width: 100%; /* ป้องกัน Navbar เกินขนาดจอ */
+    }
+    .navba a {
+        text-decoration: none;
+        color: black;
+        margin: 0 5px;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .navba a.highlight {
+        color: red;
+        font-weight: bold;
+    }
+    
+    /* Tablet (768px - 1024px) */
+    @media (max-width: 1024px) {
+        .navba {
+            max-width: calc(100% - 40px); /* ทำให้มีระยะห่างซ้าย-ขวา 10px */
+            margin: 0 auto; /* จัดตรงกลาง */
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .navba::after {
+            content: "";
+            flex-grow: 1; /* ดันข้อความให้ตัดจากด้านขวา */
+            min-width: 10px;
+        }
+    }
+    
+    /* Mobile (<768px) */
+    @media (max-width: 767px) {
+        .navba {
+            display: none; /* ซ่อน Navbar บนมือถือ */
+        }
+    }
+   
+    .news-container {
+        width: 100%;
+        max-width: 1300px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    .news-item {
+        background: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .news-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+    .news-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .news-summary {
+        font-size: 14px;
+        color: #666;
+        margin-top: 10px;
+    }
+    
+    @media (min-width: 1024px) {
+        .news-item:first-child {
+            grid-column: 1 / 2;
+            grid-row: span 2;
+        }
+        .news-item:nth-child(2) {
+            grid-column: 2 / 3;
+            grid-row: 1;
+        }
+        .news-item:nth-child(3) {
+            grid-column: 2 / 3;
+            grid-row: 2;
+        }
+        .news-item:nth-child(4) {
+            grid-column: 3 / 4;
+            grid-row: span 2;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .news-container {
+            grid-template-columns: 1fr 1fr;
+        }
+        .news-item:first-child {
+            grid-column: span 2;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .news-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+</style>
+  <nav class="navbar">
+    <div class="navbar-container">
+     
+      <div class="logo">
+        <button class="menu-toggle">☰</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Ben_10_Omnitrix.png">
+      </div>
+
+      
+      <ul class="nav-links">
+        <li>World</li>
+        <li>US Politics</li>
+        <li>Business</li>
+        <li>Health</li>
+        <li>More</li>
+      </ul>
+
+     
+      <div class="nav-actions">
+        <span>Audio</span>
+        <img src="https://png.pngtree.com/png-clipart/20230405/original/pngtree-magnifying-glass-line-icon-png-image_9028847.png" >
+        <button class="login-button">Log In</button>
+      </div>
+    </div>
+  </nav>
+  <div class="navba">
+    <a class="highlight" href="#">Ben 10 Classic:</a> <a href="#">Heatblast</a> | <a href="#">Cannonball</a> |
+    <a class="highlight" href="#">Ben 10 Alein force:</a> <a href="#">Humangasaur</a> |
+    <a href="#">Swampfire</a> |
+    <a class="highlight" href="#">Ben 10 Ultimate Alein:</a> <a href="#">Ultimate Echo Echo</a> |
+    <a href="#">Ultimate BigChill</a> | <a href="#">Ultimate Waybig</a> |
+    <a href="#">Ultimate Swampfire</a>
+    <a class="highlight" href="#">Ben 10 Omniverse:</a> <a href="#">Grasshopper</a> |
+    <a class="highlight" href="#">Bloxx</a> <a href="#">Brainstorm</a> |
+    <a href="#">Feedback</a> |
+</div>
+<div class="news-container">
+    <div class="news-item">
+        <div class="news-title">He has come back again. "Ben 10 Ultimate"</div>
+        <img src="https://m.media-amazon.com/images/S/pv-target-images/988ba0aa198cabcc0964f8e56dde3f53ac1ac389bb46f279f7955d748652b237._BR-6_AC_SX720_FMjpg_.jpg" alt="Ben 10" class="news-image">
+        <p class="news-summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eos cupiditate, iusto rem earum blanditiis nobis fugiat aperiam nam magni ea fuga, nisi repudiandae. In totam ad harum modi voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti placeat laudantium doloremque earum nobis facilis accusantium velit sit iste eaque animi suscipit ea et odit, quas minima quos consequuntur eos!  
+            <br>
+            <br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste veritatis rem doloribus expedita error iusto voluptatum exercitationem! Laudantium sunt fugiat obcaecati similique accusamus, iusto suscipit, voluptatem sequi facilis sit sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad repellendus distinctio repellat, dicta aspernatur incidunt? Eaque vero recusandae dolores veritatis et. Est totam quasi veniam eum a! Necessitatibus, ipsum odit.</p>
+    </div>
+    <div class="news-item">
+        <div class="news-title">He travels into space and meets unexpected people from his past.</div>
+        <img src="https://play-lh.googleusercontent.com/HXE7K4ds1ZpLfRaP322XyduaPrmv9Rrj6yLE5pW_tnolp578tXjLKMZGF9k5xbfTfH97OQ" alt="Ben 10 Space" class="news-image">
+        <p class="news-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non possimus architecto maxime et? Hic quia ipsam deserunt, distinctio quos, quo suscipit iure incidunt vero sequi esse optio amet ea non!</p>
+    </div>
+    <div class="news-item">
+        <div class="news-title">The mistake that needs the truth from "Ben 10"</div>
+        <img src="https://kidscreen.com/wp/wp-content/uploads/2017/05/Ben10-New.jpg" alt="Ben 10 Mistake" class="news-image">
+        <p class="news-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, ipsum. Facilis illo, ex, eaque officiis rem atque sed repudiandae voluptate, harum necessitatibus aliquid quo laudantium.</p>
+    </div>
+    <div class="news-item">
+        <div class="news-title">Ben 10 and Kevin join forces</div>
+        <img src="https://occ-0-8407-92.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABe9sUTX38fk2I0h-i6jhKCxP4tYhD6A8oZyWxj4WM2n0q3mZlkuvIq6MdJ_5YFtycGzZpNTWGB2ssPFH2hkVO81Rlw_7dC6WaTwUeTv5xS-fBq68lLEZdQs7.jpg?r=ab9" alt="Ben 10 and Kevin" class="news-image">
+        <p class="news-summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ab consequatur est nesciunt incidunt, eveniet et quod voluptates sit itaque? Quisquam aspernatur necessitatibus eos ex, rem neque provident assumenda hic!</p>
+    </div>
+</div>
+</body>
+</html>
