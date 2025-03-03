@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองทริปท่องเที่ยวเชิงชุมชนทั่วไทย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gradient-to-r from-blue-50 to-blue-200">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg p-6 flex justify-between items-center rounded-b-3xl">
+        <h1 class="text-3xl font-extrabold text-orange-500 hover:text-orange-600 cursor-pointer transition-all duration-300">THAI COMMUNITY TRIP</h1>
+        <div class="space-x-6 hidden md:flex">
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition-all duration-300">Home</a>
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition-all duration-300">About</a>
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition-all duration-300">Contact</a>
+        </div>
+        <div class="space-x-4 flex items-center">
+            <button class="text-gray-700 hover:text-orange-500 transition-all duration-300">Log In</button>
+            <button class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-all duration-300">Sign Up</button>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <header class="text-center my-8">
+        <h2 class="text-3xl font-bold">จองทริปท่องเที่ยวเชิงชุมชนทั่วไทย</h2>
+        <p class="text-gray-600">เลือกที่เที่ยวตามภาคและจังหวัดที่คุณต้องการ</p>
+    </header>
+
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mt-6">ภาคเหนือ</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="https://paikondieow.com/wp-content/uploads/2017/06/5-45.jpg" alt="บ้านแม่กำปอง" class="w-full h-40 object-cover rounded-lg">
+                <h3 class="text-xl font-bold mt-2">ชุมชนบ้านแม่กำปอง (เชียงใหม่)</h3>
+                <button onclick="bookTrip('บ้านแม่กำปอง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="https://wikicommunity.sac.or.th/files/community/835/attach/large-6497d22947f89.jpg" alt="ดอยแม่สลอง" class="w-full h-40 object-cover rounded-lg">
+                <h3 class="text-xl font-bold mt-2">ชุมชนดอยแม่สลอง (เชียงราย)</h3>
+                <button onclick="bookTrip('ดอยแม่สลอง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="https://onceinlife.co/wp-content/uploads/2021/06/%E0%B8%99%E0%B8%B2-18-1.jpg" alt="บ้านนาต้นจั่น" class="w-full h-40 object-cover rounded-lg">
+                <h3 class="text-xl font-bold mt-2">ชุมชนบ้านนาต้นจั่น (สุโขทัย)</h3>
+                <button onclick="bookTrip('บ้านนาต้นจั่น')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="https://s.isanook.com/tr/0/ud/287/1435997/316552735_5662020577212519_76.jpg?ip/resize/w728/q80/jpg" alt="หมู่บ้านรักไทย" class="w-full h-40 object-cover rounded-lg">
+                <h3 class="text-xl font-bold mt-2">หมู่บ้านรักไทย (แม่ฮ่องสอน)</h3>
+                <button onclick="bookTrip('หมู่บ้านรักไทย')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="https://cms.dmpcdn.com/travel/2022/06/16/1672a8c0-ed37-11ec-b29c-6392d4ef720a_webp_original.jpg" alt="ชุมชนบ้านป่าเหมี้ยง" class="w-full h-40 object-cover rounded-lg">
+                <h3 class="text-xl font-bold mt-2">ชุมชนบ้านป่าเหมี้ยง (ลำปาง)</h3>
+                <button onclick="bookTrip('ชุมชนบ้านป่าเหมี้ยง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+            </div>
+            <div class="bg-white p-4 shadow-lg rounded-lg">
+                <img src="https://th.readme.me/f/22720/5c59a739cf17b9306a1e759b.jpg" alt="บ้านนาตอง" class="w-full h-40 object-cover rounded-lg">
+                <h3 class="text-xl font-bold mt-2">ชุมชนบ้านนาตอง (แพร่)</h3>
+                <button onclick="bookTrip('ชุมชนบ้านนาตอง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold mt-12">ภาคกลาง</h2>
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://img.kapook.com/image/travel/20090909145218_1.jpg" alt="ชุมชนคลองสระบัว" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนคลองสระบัว (พระนครศรีอยุธยา)</h3>
+            <button onclick="bookTrip('ชุมชนคลองสระบัว')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://www.mycity.tataya.net/th/img_prod/c1100_p056993048_.jpg" alt="ชุมชนบ้านศรีประจันต์" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านศรีประจันต์ (สุพรรณบุรี)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านศรีประจันต์')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://f.ptcdn.info/783/069/000/qbult66jqKemp521ZNb-o.jpg" alt="ชุมชนบ้านโป่ง" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านโป่ง (ราชบุรี)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านโป่ง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://lh4.googleusercontent.com/proxy/cMadsPNebOlFhEQhN8rPs3mMQUghcx_rrDAAzZgXWGs__fHbbFoyYQkSzeH-894l0JSjxAT2HsQkp6HGKYLiTU40G7SA2OOH9Fdux88xjls" alt="ชุมชนสามพราน" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนสามพราน (นครปฐม)</h3>
+            <button onclick="bookTrip('ชุมชนสามพราน')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://wikicommunity.sac.or.th/files/community/835/attach/large-6497d22947f89.jpg" alt="ชุมชนบ้านหนองขาว" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านหนองขาว (กาญจนบุรี)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านหนองขาว')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://cbtthailand.dasta.or.th/upload-file-api/Resources/images/reviewTravel/Bang%20Kobua/A1-2.jpg" alt="บางกระเจ้า" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบางกระเจ้า (สมุทรปราการ)</h3>
+            <button onclick="bookTrip('ชุมชนบางกระเจ้า')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        </div>
+        <h2 class="text-2xl font-bold mt-12">ภาคตะวันออกเฉียงเหนือ</h2>
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://www.chillpainai.com/src/wewakeup/scoop/images/99685f65c1a7d366aa94c3a5de4726d75e7136d7.jpg" alt="เชียงคาน" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนเชียงคาน (เลย)</h3>
+            <button onclick="bookTrip('ชุมชนเชียงคาน')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGw9MIXYvK6HC9idigs3rsCfjQ4OYV8W02Jw&s" alt="ชุมชนบ้านเชียง" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านเชียง (อุดรธานี)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านเชียง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://f.ptcdn.info/546/073/000/qtcxqtptymcl3U3B019-o.jpg" alt="ชุมชนบ้านผานางคอย " class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านผานางคอย (บุรีรัมย์)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านผานางคอย ')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://cbtthailand.dasta.or.th/upload-file-api/Resources/RelateAttraction/Images/RAT300429/1.jpg" alt="บ้านด่านเกวียน" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านด่านเกวียน (นครราชสีมา)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านด่านเกวียน')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://cms.dmpcdn.com/travel/2018/10/08/febedeec-0e49-427c-95f8-8cb3387b56f8.jpg" alt="บ้านศรีฐาน" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านศรีฐาน (ยโสธร)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านศรีฐาน')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t39.30808-6/464905804_8607558302665180_3770789762775793478_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGCMrdgZV8_6Yc7JrhsDqo-YSETn7Ml2ORhIROfsyXY5PSm01k-m6wnQklon6tS9SDqRPhxG4cE6jlVlbuc5L3D&_nc_ohc=wFRjNnEntGUQ7kNvgEIHnDO&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_gid=A1AuZ0AccBq1rINp-P4CM6m&oh=00_AYD75TiH7Uvs--Nyb8DRgItU_1JLLptzNcLX8drZaGGIrQ&oe=67CA61A0" alt="บ้านขุนหาญ" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านขุนหาญ (ศรีสะเกษ)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านขุนหาญ')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        
+    </div>
+
+    <!-- ภาคใต้ -->
+    <h2 class="text-2xl font-bold mt-12">ภาคใต้</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://cms.dmpcdn.com/travel/2022/03/24/ab3fc380-ab32-11ec-b94b-014ed2554193_webp_original.jpg" alt="บ้านบางโรง" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านบางโรง (ภูเก็ต)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านบางโรง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="http://edtprod1.edtguide.com/edtguide/assets/1-9_2022-02-10-063657_iaqt.jpg" alt="ชุมชนบ้านในวง" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านในวง (ระนอง)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านในวง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://www.thaitoptour.com/wp-content/uploads/2020/04/nxsupn5w5ECtNkt9siD-o-e1586146145318.jpg" alt="บ้านคีรีวง" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านคีรีวง (นครศรีธรรมราช)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านคีรีวง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://www.mata-lumnam.com/assets/image/contents/07102021093051LINE_ALBUM_%E0%B8%88.%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%20%E0%B8%AD.%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B9%84%E0%B8%97%E0%B8%A3%20-%20%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%A2%E0%B8%B2%E0%B8%A7_211001_2.jpg" alt="บ้านเกาะยาว" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านเกาะยาว (สตูล)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านเกาะยาว')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://th.readme.me/f/42383/cover.jpg" alt="บ้านน้ำราบ" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ชุมชนบ้านน้ำราบ (ตรัง)</h3>
+            <button onclick="bookTrip('ชุมชนบ้านน้ำราบ')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <img src="https://www.unseenthinthai.com/wp-content/uploads/2023/07/%E0%B8%9B%E0%B8%81-%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%95%E0%B8%B2%E0%B8%9B%E0%B8%B1%E0%B8%87-%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%9E%E0%B8%A3.jpg" alt="ดอยตาปัง" class="w-full h-40 object-cover rounded-lg">
+            <h3 class="text-xl font-bold mt-2">ดอยตาปัง (ชุมพร)</h3>
+            <button onclick="bookTrip('ดอยตาปัง')" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700">จองตอนนี้</button>
+        </div>
+    </div>
+   
+</div>
+    
+
+    <script>
+        function bookTrip(destination) {
+            alert('คุณกำลังจองทริปไป ' + destination);
+            window.location.href = 'payment.html?trip=' + encodeURIComponent(destination);
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white mt-12 p-8 text-center">
+        <p>© 2025 THAI COMMUNITY TRIP. All rights reserved.</p>
+    </footer>
+</body>
+</html>
